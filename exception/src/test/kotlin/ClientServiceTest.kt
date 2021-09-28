@@ -69,7 +69,7 @@ class ClientServiceTest {
             clientService.saveClient(client)
         }
         assertEquals(ErrorCode.INVALID_LENGTH, exception.errorCode[0])
-        assertEquals(ErrorCode.INVALID_LENGTH, exception.errorCode[1])
+        assertEquals(ErrorCode.NULL_OR_EMPTY, exception.errorCode[1])
         assertEquals(ErrorCode.INVALID_LENGTH, exception.errorCode[2])
         assertEquals(ErrorCode.INVALID_CHARACTER, exception.errorCode[3])
         assertEquals(ErrorCode.INVALID_NUMBER, exception.errorCode[4])
