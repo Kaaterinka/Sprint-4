@@ -8,13 +8,13 @@ fun <T1, T2> compare(p1: Pair<T1, T2>, p2: Pair<T1, T2>): Boolean {
 }
 
 //// 2.
-fun countGreaterThan(anArray: Array<Any>, elem: Any): Int {
-    var result = 0
-    for ((index, element) in anArray.withIndex()) {
-        if (element == elem)
-            result = index
+fun <T:Comparable<T>> countGreaterThan(anArray: Array<T>, elem: T): Int {
+    var count = 0
+    for (element in anArray) {
+        if (element > elem)
+            count++
     }
-    return result
+    return count
 }
 
 //// 3.
